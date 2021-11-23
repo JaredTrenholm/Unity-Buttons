@@ -14,7 +14,7 @@ public class Cube : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.up*0.5f, Space.World);
+        transform.Translate((Vector3.up*0.5f)*Time.timeScale, Space.World);
         if(Vector3.Distance(this.gameObject.transform.position, Vector3.zero)>15f)
         {
             Destroy(this.gameObject);
